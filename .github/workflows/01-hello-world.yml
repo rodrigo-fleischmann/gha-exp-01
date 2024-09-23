@@ -8,8 +8,29 @@ on:
   workflow_dispatch:
 
 jobs:
-  fleischmann-hellow-world-job:
+  hello-1:
+    # this is the runner this job will run
     runs-on: ubuntu-latest
+    
     steps:
-      - name: fleischmann-hello-world-step
-        run: echo "Hello World!"
+    
+      - name: A step to print hello world
+        run: |
+          echo "First line hellow world!"
+          echo Second line of echo
+          echo Last line of echo
+          
+      - name: Another step to print
+        run: echo Printing without double quotes
+
+  hello-2:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    
+      - name: Step one of the second job
+        run: echo On the second job the first step
+        
+      - name: Step two of the second job
+        run: echo On the second job the second step
