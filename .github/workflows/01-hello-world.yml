@@ -1,0 +1,15 @@
+name: Testing GHA with a Hello World
+on:
+  # triger on push
+  push:
+    branches: [main]
+
+  # enable trigger in action UI
+  workflow_dispatch:
+
+jobs:
+  fleischmann-hellow-world-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: fleischmann-hello-world-step
+        run: echo "Hello World!"
